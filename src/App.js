@@ -7,6 +7,7 @@ import Company from './components/pages/Company'
 import Contact from './components/pages/Contact'
 import NewProject from './components/pages/NewProject'
 import NotFound from './components/pages/NotFound'
+import Projects from './components/pages/Projects'
 
 // Layout
 import Container from './components/layout/Container'
@@ -23,6 +24,7 @@ function App() {
           <Route exact path='/company' element={<Company />} />
           <Route exact path='/contact' element={<Contact />} />
           <Route exact path='/newproject' element={<NewProject />} />
+          <Route exact path='/projects' element={<Projects />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>
