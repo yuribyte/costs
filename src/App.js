@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 // Pages
 import Home from './components/pages/Home'
@@ -10,16 +10,13 @@ import NotFound from './components/pages/NotFound'
 
 // Layout
 import Container from './components/layout/Container'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
 
 function App() {
   return (
     <Router>
-      <ul className='app-navbar'>
-        <Link to='/'>Home</Link>
-        <Link to='/company'>Company</Link>
-        <Link to='/contact'>Contact</Link>
-        <Link to='/newproject'>NewProject</Link>
-      </ul>
+      <Navbar></Navbar>
       <Container customClass='min-height'>
         <Routes>
           <Route exact path='/' element={<Home />} />
@@ -29,7 +26,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>
-      <p>Footer</p>
+      <Footer></Footer>
     </Router>
   );
 }
